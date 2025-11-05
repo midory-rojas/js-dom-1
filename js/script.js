@@ -10,15 +10,34 @@ console.log(titleElmen);
  console.log(imgLampadina);
 
  //Button
- const bottone = document.querySelector(".btn");
- console.log(bottone);
+ const btnElem = document.querySelector(".btn");
+ console.log(btnElem);
 
- //
+ // // Quando clicchiamo il bottone, si accendi 
+ // la lampadina e quando se spegne la lampadina 
+ // diventa spenta
 
- bottone.addEventListener("click", function() {
+ let accesa = false;
+ btnElem.addEventListener("click", function() {
 
-    imgLampadina.src = "./img/yellow_lamp.png";
- });
+    if(accesa === true) {
+        imgLampadina.src = "img/white_lamp.png";
+        imgLampadina.classList.remove("accesa");
+        btnElem.innerText = "Accendi";  
+        titleElem.innerHTML = "";
+    
+    } else {
+        imgLampadina.src ="img/yellow_lamp.png";
+        imgLampadina.classList.add("accesa");
+        btnElem.innerText= "Spegni";
+        
+    }
+    accesa = !accesa;
+  
+ }); 
+
+
+
 
 
 
