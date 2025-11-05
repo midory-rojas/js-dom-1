@@ -13,7 +13,7 @@ console.log(titleElmen);
  const btnElem = document.querySelector(".btn");
  console.log(btnElem);
 
- // // Quando clicchiamo il bottone, si accendi 
+ // Quando clicchiamo il bottone, si accendi 
  // la lampadina e quando se spegne la lampadina 
  // diventa spenta
 
